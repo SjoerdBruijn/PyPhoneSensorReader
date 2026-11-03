@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='utf-8'?>
+<phyphox version="1.14" locale="en">
+  <title>Phone Sensor Stream</title>
+  <category>Raw Sensors</category>
+  <description>Stream simultaneous phone sensor measurements to the Python dashboard through remote access.</description>
+  <data-containers>
+    <container size="256">acc_t</container>
+    <container size="256">acc_x</container>
+    <container size="256">acc_y</container>
+    <container size="256">acc_z</container>
+    <container size="256">gyro_t</container>
+    <container size="256">gyro_x</container>
+    <container size="256">gyro_y</container>
+    <container size="256">gyro_z</container>
+    <container size="256">mag_t</container>
+    <container size="256">mag_x</container>
+    <container size="256">mag_y</container>
+    <container size="256">mag_z</container>
+    <container size="256">pressure_t</container>
+    <container size="256">pressure_x</container>
+    <container size="256">light_t</container>
+    <container size="256">light_x</container>
+    <container size="256">proximity_t</container>
+    <container size="256">proximity_x</container>
+    <container size="256">temperature_t</container>
+    <container size="256">temperature_x</container>
+    <container size="256">humidity_t</container>
+    <container size="256">humidity_x</container>
+  </data-containers>
+  <input>
+    <sensor type="accelerometer" rate="100" rateStrategy="request" ignoreUnavailable="true">
+      <output component="t">acc_t</output>
+      <output component="x">acc_x</output>
+      <output component="y">acc_y</output>
+      <output component="z">acc_z</output>
+    </sensor>
+    <sensor type="gyroscope" rate="100" rateStrategy="request" ignoreUnavailable="true">
+      <output component="t">gyro_t</output>
+      <output component="x">gyro_x</output>
+      <output component="y">gyro_y</output>
+      <output component="z">gyro_z</output>
+    </sensor>
+    <sensor type="magnetic_field" rate="50" rateStrategy="request" ignoreUnavailable="true">
+      <output component="t">mag_t</output>
+      <output component="x">mag_x</output>
+      <output component="y">mag_y</output>
+      <output component="z">mag_z</output>
+    </sensor>
+    <sensor type="pressure" rate="20" rateStrategy="request" ignoreUnavailable="true">
+      <output component="t">pressure_t</output>
+      <output component="x">pressure_x</output>
+    </sensor>
+    <sensor type="light" rate="20" rateStrategy="request" ignoreUnavailable="true">
+      <output component="t">light_t</output>
+      <output component="x">light_x</output>
+    </sensor>
+    <sensor type="proximity" rate="20" rateStrategy="request" ignoreUnavailable="true">
+      <output component="t">proximity_t</output>
+      <output component="x">proximity_x</output>
+    </sensor>
+    <sensor type="temperature" rate="20" rateStrategy="request" ignoreUnavailable="true">
+      <output component="t">temperature_t</output>
+      <output component="x">temperature_x</output>
+    </sensor>
+    <sensor type="humidity" rate="20" rateStrategy="request" ignoreUnavailable="true">
+      <output component="t">humidity_t</output>
+      <output component="x">humidity_x</output>
+    </sensor>
+  </input>
+  <views>
+    <view label="Streaming">
+      <info label="Enable remote access, press Play and enter the displayed address in the Python dashboard." />
+    </view>
+  </views>
+</phyphox>
